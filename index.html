@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="scss/index.css" />
+  <title>Frontend Mentor | Pod request access landing page</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="section-img">
+      <img id="logo-pod" src="starter-code/assets/desktop/logo.svg" alt="">
+      <section id="publish-podcast">
+        <div id="container-text">
+          <h1>Publish your podcasts</h1>
+          <h1 id="white">everywhere.</h1>
+          <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify,
+            Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+        </div>
+        <div id="button-access">
+          <input type="email" name="" id="mail_input" placeholder="Email address">
+          <input type="button" onclick="validatemail()" value="Request Access">
+          <p id="message_error">Oops! Please check your email</p>
+        </div>
+
+        <div id="img-logos">
+          <img src="starter-code/assets/desktop/spotify.svg" alt="">
+          <img src="starter-code/assets/desktop/apple-podcast.svg" alt="">
+          <img src="starter-code/assets/desktop/google-podcasts.svg" alt="">
+          <img src="starter-code/assets/desktop/pocket-casts.svg" alt="">
+
+        </div>
+      </section>
+    </div>
+    <picture>
+      <source media="(min-width:769px)" srcset="starter-code/assets/desktop/image-host.jpg" >
+      <img src="starter-code/assets/tablet/image-host.jpg" alt="">
+
+    </picture>
+    <img id="dots-botton" src="starter-code/assets/desktop/bg-pattern-dots.svg" alt="">
+  </div>
+</body>
+<script src="js/index.js"></script>
+
+</html>
