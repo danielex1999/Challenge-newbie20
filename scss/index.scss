@@ -6,7 +6,7 @@
 
 $green: #54E6AF;
 $grey-dark: #2C344B;
-$black: #121725;
+$black: hsl(224, 35%, 11%);
 $white: #FFFFFF;
 $grey-white: #5A668A;
 $white-pearl: #C2CBE5;
@@ -284,7 +284,178 @@ body {
             position: absolute;
             bottom: -8%;
             right: 0;
-            left:20px;
+            left: 20px;
+        }
+    }
+}
+
+/*Formato Movil*/
+@media screen and (max-width: 375px) {
+    picture {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        background-image: url("../starter-code/assets/mobile/image-host.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        align-items: center;
+    }
+
+    body::before {
+        background-color: hsla(224, 35%, 11%, 0.5);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+
+    }
+
+    #container {
+        width: 100%;
+        height: 515px;
+        padding: 0px 20px;
+
+        #section-img {
+            position: relative;
+            width: -webkit-fill-available;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            #logo-pod {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+
+            #publish-podcast {
+                width: -webkit-fill-available;
+                height: -webkit-fill-available;
+                position: relative;
+                background: $black;
+                left: 0;
+                bottom: 0;
+                top: 0;
+                background: none;
+                justify-content: space-between;
+
+                #container-text {
+                    margin-top: 55px;
+
+                    h1 {
+                        color: #54E6AF;
+                        text-align: center;
+                        font-size: 26px;
+                        font-family: Chivo;
+                        line-height: 38px;
+                        text-transform: uppercase;
+                    }
+
+                    h1#white {
+                        color: $white;
+                    }
+
+                    p {
+                        color: #C2CBE5;
+                        text-align: center;
+                        font-size: 15px;
+                        font-family: Chivo;
+                        line-height: 25px;
+                        width: auto;
+                    }
+                }
+
+                #button-access {
+                    width: auto;
+                    height: auto;
+                    margin-top: 0px;
+                    border-radius: 28px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    order: 1;
+                    background: none;
+
+                    input:focus {
+                        outline: none;
+                    }
+
+                    input[type="email"] {
+                        margin: 0;
+                        background: none;
+                        font-style: normal;
+                        font-weight: bold;
+                        color: #FFF;
+                        font-size: 14px;
+                        font-family: Chivo;
+                        line-height: 28px;
+                        border: none;
+                        width: -webkit-fill-available;
+                        border-radius: 28px;
+                        background: #2C344B;
+                        height: 46px;
+                        padding-left: 25px;
+                    }
+
+                    input[type="email"]::placeholder {
+                        color: #FFFFFF;
+                    }
+
+                    input[type="button"] {
+                        height: 46px;
+                        margin-top: 16px;
+                        background: #B3FFE2;
+                        box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.497913);
+                        border-radius: 28px;
+                        width: 162px;
+                        border: none;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 28px;
+                        color: #121725;
+                        font-family: "Chivo";
+                        cursor: pointer;
+                        width: -webkit-fill-available;
+                    }
+
+                    p#message_error {
+                        color: #FB3E3E;
+                        font-size: 12px;
+                        font-family: "Chivo";
+                        margin-left: 0px;
+                        position: absolute;
+                        bottom: -15%;
+                        display: none;
+                    }
+                }
+
+                #img-logos {
+                    display: flex;
+                    margin: 0;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        margin-right: 10px;
+                        width: 22%;
+                    }
+                }
+            }
+        }
+
+        #dots-botton {
+            position: relative;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            display: none;
         }
     }
 }
